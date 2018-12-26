@@ -1,5 +1,4 @@
 import React from 'react';
-import sortMultidimensionalArrayFunc from 'sort-multidimensional-array-func';
 import { block } from 'bem-cn';
 import './Table.css'
 const cn = block('bem-cn');
