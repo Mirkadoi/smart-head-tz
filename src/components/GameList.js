@@ -92,35 +92,4 @@ export default class GameList extends React.Component {
       </table>
     );
   }
-
-  sortTableFunc = (id, sortMethod) => {
-    const { data, columns } = this.state;
-
-    let currentSortMethod = 'default';
-
-    switch (sortMethod) {
-      case 'default':
-        currentSortMethod = 'asc';
-        break;
-      case 'asc':
-        currentSortMethod = 'desc';
-        break;
-      case 'desc':
-        currentSortMethod = 'asc';
-        break;
-      default:
-        currentSortMethod = 'asc';
-    }
-
-    const changeColumn = columns.map((e, i) =>
-      ({ ...e, sort: i === id ? currentSortMethod : 'default' })
-    );
-
-    const sortData = sortMultidimensionalArrayFunc(data, id, currentSortMethod);
-
-    this.setState({
-      data: sortData,
-      columns: changeColumn,
-    });
-  }
 }
