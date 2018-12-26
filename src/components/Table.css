@@ -1,0 +1,93 @@
+table p,h5 {
+    margin: 0 auto;
+    font-size: 14px;
+}
+table {
+background-color: #ffffff;
+border: 1px solid #dfe2e5;
+border-spacing: 0px;
+width: 1270px;
+}
+tbody td {
+border-bottom: 1px solid #dfe2e5;
+height: 70px;
+}
+thead th{
+border-bottom: 1px solid #dfe2e5; 
+color: #8896aa;
+font-family: 'SourceSansPro-Regular';
+font-size: 14px;
+height: 50px;
+align-items: center;
+text-align: left;
+}
+.left-td { 
+    padding-left: 31px;
+    font-family: 'SourceSansPro-Regular';
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px
+}
+.left-td img{
+    padding-right: 12px;
+}
+
+.left-td h5{
+   color: #5c6370;
+}
+.left-td {
+    color: #7f8fa4;
+    font-size: 12px;
+}
+.title {
+    flex: 1 1 auto;
+    align-self: auto;
+}
+
+td .score {
+    border: 1px solid;
+    border-radius: 100%;
+    box-shadow: none;
+    padding: 6px;
+    color: white;
+    font-family: 'SourceSansPro-Bold';
+}
+.reviews{
+    font-family: 'SourceSansPro-Bold';
+
+}
+.valueReviews{
+    font-family: 'SourceSansPro-Regular';
+    font-size: 12px;
+    color: #93a0b1;
+}
+.status{
+    border: 1px solid;
+    border-radius: 3px;
+    font-family: 'SourceSansPro-SemiBold';
+    font-size: 10px;
+    color: white;
+    padding: 3px 9px 2px 9px;
+    text-transform: uppercase;
+}
+.right-td {
+    color:#bbc5d5;
+    padding-right: 31px;
+    font-size: 22px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: right;
+    
+}
+.right-td span{
+    flex: 1 1 auto;
+}
+.right-td span.right-td-center{
+    flex: 1 1 auto;
+    
+}

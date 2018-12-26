@@ -29,5 +29,21 @@
   padding-right: 51px; 
   display: flex;
 }
-
+.Content{
+  padding-left: 48px;
+  padding-right: 48px;
+}
+.hedline{
+  font-family: 'SourceSansPro-SemiBold';
+  font-weight: bolder;
+  font-size: 16px;  
+  margin-top: 63px;
+  margin-bottom: 22px;
+  color: #354052;
+}
+.text-content{
+  color: #8696a9;
+  font-family: 'SourceSansPro-Regular';
+  padding-right: 90px;
+}
 
