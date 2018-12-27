@@ -1,7 +1,5 @@
 import React from 'react';
-import { block } from 'bem-cn';
 import './Table.css'
-const cn = block('bem-cn');
 
 const TABLE_COLUMNS = [
   {
@@ -25,16 +23,14 @@ const TABLE_COLUMNS = [
   },
 ];
 
-const SortableHeader = (props) => {
-  const { columns} = props;
-
+const SortableHeader = () => {
   return(
     <thead>
-    <tr >
+    <tr>
         <th style={{ width: '356px' }}>
           <div style={{ paddingLeft: '31px', textAlign: 'left' }}>Title</div>
         </th>
-      {columns.map((element, index) =>
+      {TABLE_COLUMNS.map((element, index) =>
         <th key={index}>
           {element.label}
         </th>
@@ -45,11 +41,10 @@ const SortableHeader = (props) => {
 }
 
 const SortableBody = (props) => {
-  const { data } = props;
-
+  
   return(
     <tbody>
-        {data.map((index) =>
+        {props.data.map((index) =>
           <tr key={index} >
             <td><div className="left-td"><img src={index.img} alt="Avatar"/><div className="title"  ><h5>{index.name}</h5><p>{index.publisher}</p></div></div></td>
             <td style={{width: '124px'}}><span className="score" style={{backgroundColor: index.scoreColor, borderColor:index.scoreColor}}>{index.score}</span></td>
@@ -64,30 +59,12 @@ const SortableBody = (props) => {
 }
 
 export default class GameList extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      data: [],
-      columns: TABLE_COLUMNS,
-    };
-  }
-
-  componentWillMount() {
-    const { data } = this.props;
-    this.setState({ data });
-  }
-
-  componentWillReceiveProps(nextProps) {
-    const { data } = nextProps;
-    this.setState({ data });
-  }
 
   render() {
     return (
-      <table className={cn}>
-        <SortableHeader columns={this.state.columns}  />
-        <SortableBody data={this.state.data} />
+      <table>
+        <SortableHeader columns={this.TABLE_COLUMNS}  />
+        <SortableBody data={this.props.data} />
       </table>
     );
   }
