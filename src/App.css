@@ -1,4 +1,5 @@
 .App{
+  position: relative;
   background-color: #eff3f6;
   width: 1366px;
   height: 1100px;
